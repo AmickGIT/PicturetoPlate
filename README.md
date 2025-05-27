@@ -1,37 +1,3 @@
-
-Ran tool
-
-Ran tool
-
-Search files...
-
-Ran tool
-
-Read file: moondreamtest.ipynb
-
-Read file: moondreamtest.ipynb
-
-Ran tool
-
-Ran tool
-
-Ran tool
-
-Ran tool
-
-Ran tool
-
-Ran tool
-
-Ran tool
-
-Ran tool
-
-Ran tool
-Based on the project structure and the content of the main notebook, here is a draft for your README file:
-
----
-
 # PictureToPlate
 
 ## Overview
