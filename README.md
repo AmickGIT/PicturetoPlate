@@ -9,7 +9,7 @@
 - **Image-to-Recipe Generation:** Upload a food image and receive a 3-step recipe summary.
 - **Vision-Language Model:** Uses Qwen2.5-VL for image understanding and text generation.
 - **Dataset Structure:** Includes images, dish titles, and recipe summaries for both training and testing.
-- **Jupyter Notebook Workflow:** The main logic is implemented in `moondreamtest.ipynb`.
+- **Jupyter Notebook Workflow:** The main logic is implemented in `PictureToPlate.ipynb`.
 
 ## Project Structure
 
@@ -21,7 +21,7 @@
 ├── Test_Images/        # Test set images
 ├── Test_Titles/        # Dish names for test set
 ├── Test_Summaries/     # 3-step recipe summaries for test set
-├── moondreamtest.ipynb # Main Jupyter notebook for model inference
+├── PictureToPlate.ipynb # Main Jupyter notebook for model inference
 └── offload/            # (Empty or for future use)
 ```
 
@@ -46,22 +46,40 @@ Summary:
 
 - Python 3.8+
 - torch
-- transformers
-- Qwen2.5-VL model and dependencies
+- transformers (latest, built from source)
+- accelerate
+- qwen-vl-utils[decord]==0.0.8
 - Jupyter Notebook
 
-Install dependencies with:
+### Installation
+
+To ensure compatibility with Qwen2.5-VL, install the latest Hugging Face Transformers and Accelerate from source:
 
 ```bash
-pip install torch transformers
+pip install git+https://github.com/huggingface/transformers accelerate
+```
+
+> **Note:** If you do not install from source, you might encounter the following error:
+> 
+> ```
+> KeyError: 'qwen2_5_vl'
+> ```
+
+We also offer a toolkit to help you handle various types of visual input more conveniently, as if you were using an API. This includes base64, URLs, and interleaved images and videos. Install it with:
+
+```bash
+# It's highly recommended to use the `[decord]` feature for faster video loading.
+pip install qwen-vl-utils[decord]==0.0.8
 ```
 
 ## Usage
 
 1. Clone the repository and navigate to the project directory.
 2. Download or prepare your food images and place them in the appropriate folder.
-3. Open `moondreamtest.ipynb` in Jupyter Notebook.
-4. Follow the notebook instructions to run the model and generate recipes.
+3. Install the required dependencies as described above.
+4. Open `PictureToPlate.ipynb` in Jupyter Notebook.
+5. Follow the notebook instructions to run the model and generate recipes.
+6. **After generating a recipe summary, compare it with the ground-truth summaries in `Test_Summaries/` to evaluate the model's performance.**
 
 ## Dataset
 
@@ -73,7 +91,3 @@ pip install torch transformers
 
 - [Qwen2.5-VL](https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct) for the vision-language model.
 - HuggingFace Transformers library.
-
----
-
-Would you like to add any specific usage instructions, dataset details, or credits? If not, I can save this as `README.md` for you.
