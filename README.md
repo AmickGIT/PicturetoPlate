@@ -19,20 +19,54 @@
 - Benchmarking: Automatic ROUGE-1, ROUGE-2, and ROUGE-L scoring against test summaries.  
 - Notebook Workflow: End-to-end pipeline implemented in `PictureToPlate.ipynb`.  
 
+## Quick Start: How to Use PictureToPlate
+
+**Follow these simple steps to generate professional 3-step recipes from food images!**
+
+1. **Choose a Dish Filename:**
+   - Pick a filename (e.g., `RedPasta`, `MangoShake`, etc.) from any of the `Test_Images` or `Test_Summaries` folders.
+   - **Example:** For the file `Test_Images/RedPasta.jpeg`, use `RedPasta` as the filename.
+   - **Next, enter the noisy title for the dish in the `dish` variable** in the `PictureToPlate.ipynb` notebook (e.g., `dish = "Italian"`).
+
+2. **Open the Notebook:**
+   - Launch `PictureToPlate.ipynb` in Jupyter Notebook.
+
+3. **Setup:**
+   - In the **Setup** section, enter your chosen filename (e.g., `RedPasta`) and the noisy dish title.
+   - No need to change anything else—just run the notebook cells in order!
+
+4. **Description Generation:**
+   - See how the model interprets your image: ingredients, textures, and predicts the dish name.
+
+5. **Recipe Generation:**
+   - The model generates a concise, professional 3-step recipe for your dish.
+
+6. **ROUGE Scores:**
+   - Instantly compare the generated recipe to the ground-truth summary using ROUGE metrics.
+
+---
+
+## Folder Guide: What Does Each Folder Do?
+
+- **`Test_Images/`**: Food images you can upload and use in the notebook for testing.
+- **`Test_Summaries/`**: Ground-truth 3-step summaries for each test dish. Used to evaluate the generated recipes.
+- **`Summaries/`**: Summaries of example dishes used in the recipe prompt inside `PictureToPlate.ipynb` (for few-shot learning).
+- **`Images/`**: Images of example dishes referenced in prompts. Not used for evaluation, but help guide the model.
+
+---
+
 ## Project Structure
 
 ```plaintext
 .
-├── Images/                # Training set images
+├── Images/                # Example images for prompting (not used in test set)
 ├── Titles/                # Training dish titles (noisy)
-├── Summaries/             # Training 3-step summaries
-├── Test_Images/           # Test set images
-├── Test_Titles/           # Test dish titles
+├── Summaries/             # Example summaries for recipe prompts
+├── Test_Images/           # Test set images (use these in the notebook)
 ├── Test_Summaries/        # Ground-truth summaries for evaluation
 ├── PictureToPlate.ipynb   # Jupyter Notebook: pipeline code & inference
 ├── prompts/               # Example prompts for description & recipe generation
-└── offload/               # (future extensions)
-````
+```
 
 ## Installation
 
@@ -122,8 +156,8 @@
 | Metric     | Without Description | With Description |
 | ---------- | ------------------: | ---------------: |
 | ROUGE-1 F1 |                0.39 |             0.42 |
-| ROUGE-2 F1 |               0.048 |                — |
-| ROUGE-L F1 |               0.254 |                — |
+| ROUGE-2 F1 |               0.048 |            0.053 |
+| ROUGE-L F1 |               0.254 |            0.252 |
 
 ## Examples
 
