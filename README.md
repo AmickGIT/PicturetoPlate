@@ -146,6 +146,3 @@ This project is licensed under the MIT License. See `LICENSE` for details.
 * **Qwen2.5-VL-3B-Instruct** for vision-language capabilities
 * **Hugging Face Transformers** for model integration
 * **bitsandbytes** for 4-bit quantization
-
-```
-```
