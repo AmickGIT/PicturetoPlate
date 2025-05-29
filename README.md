@@ -51,7 +51,7 @@
 - **`Test_Images/`**: Food images you can upload and use in the notebook for testing.
 - **`Test_Summaries/`**: Ground-truth 3-step summaries for each test dish. Used to evaluate the generated recipes.
 - **`Summaries/`**: Summaries of example dishes used in the recipe prompt inside `PictureToPlate.ipynb` (for few-shot learning).
-- **`Images/`**: Images of example dishes referenced in prompts. Not used for evaluation, but help guide the model.
+- **`Images/`**: Images of example dishes referenced in prompts. Not used in this script.
 
 ---
 
