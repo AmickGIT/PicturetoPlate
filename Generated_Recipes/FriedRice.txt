@@ -1,7 +1,9 @@
 Title: Rice
 
-Dish Name: Dosa
+Dish Name: Shrimp Fried Rice
 Summary:
-1. Combine rice and lentils to make batter. Heat oil in a pan and fry the batter until golden brown.
-2.Idli batter mix with rice and Lentils. Heat in a pot and cook until fluffy.
-3.Sambar is made with vegetables like potatoes, beans, and onions. Cook until thick. Serve with dosa and idli.
+1. Cook rice according to package instructions. While it's cooking, slice shrimp into bite-sized pieces and chop vegetables like bell peppers, carrots and green onions.
+2a. Heat oil in a large pan over medium-high heat. Add shrimp and vegetables and cook until shrimp is opaque and vegetables are softened.
+2b. Add rice to the same pan and toss everything together until well coated with oil.
+3a. Add any additional seasonings like soy sauce, oyster sauces, or sesame oil if desired.
+3b. Serve immediately and enjoy!
